@@ -18,7 +18,6 @@ def cooockies():
         return f'Привет, ты уже был, твой номер на {day} = {numb}'
         
     else:
-        day=strftime("%Y-%m-%d")
         r.incr('page:index:counter:' + day)
         return '42 - ' + str(r.get('page:index:counter:' + day))
 
